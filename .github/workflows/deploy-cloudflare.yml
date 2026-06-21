@@ -249,7 +249,7 @@ jobs:
           WORKER_URL="${WORKER_URL:-${CUSTOM_DOMAIN:+https://$CUSTOM_DOMAIN}}"
           
           if [ -z "$WORKER_URL" ]; then
-            echo "❌ Preview URL not available. Please set CUSTOM_DOMAIN."
+            echo "❌ No initialization URL available (missing worker_url and CUSTOM_DOMAIN)."
             exit 1
           fi
           
